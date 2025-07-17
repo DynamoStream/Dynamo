@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DYNAMO RADIO STREAM | Transmisión en Vivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>DYNAMO RADIO STREAM</h1>
+            <p>Música, Deportes y Noticias en Vivo</p>
+        </div>
+        <nav>
+            <a href="#inicio"><i class="fas fa-home"></i> Inicio</a>
+            <a href="#radio"><i class="fas fa-broadcast-tower"></i> Radio</a>
+            <a href="#deportes"><i class="fas fa-running"></i> Deportes</a>
+            <a href="#finanzas"><i class="fas fa-chart-line"></i> Finanzas</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="stream-section">
+            <h2>Transmisión en Vivo</h2>
+            <div class="kick-embed">
+                <iframe src="https://player.kick.com/stream-dynamo" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="deportes" class="widget-section">
+            <h2>Noticias Deportivas</h2>
+            <div id="sports-widget" class="widget">
+                <div class="news-item">
+                    <h3>⚽ Argentina gana la Copa América 2024</h3>
+                    <p>La selección liderada por Messi consigue su tercer título consecutivo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="finanzas" class="widget-section">
+            <h2>Datos Financieros</h2>
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                    "symbols": [
+                        {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                        {"proName": "FOREXCOM:NSXUSD", "title": "Nasdaq 100"},
+                        {"description": "USD/ARS", "proName": "FX_IDC:USDARS"}
+                    ],
+                    "colorTheme": "dark",
+                    "isTransparent": true,
+                    "showSymbolLogo": true,
+                    "locale": "es"
+                }
+                </script>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DYNAMO RADIO STREAM. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
